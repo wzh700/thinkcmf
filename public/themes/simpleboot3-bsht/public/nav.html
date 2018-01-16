@@ -1,0 +1,18 @@
+<div class="container-fluid" id="header">
+	<img id="logo" src="__TMPL__/public/assets/img/logo2.png"/>
+	<span class="glyphicon glyphicon-th-list visible-xs"></span>
+               <navigation nav-id="1" root="ul" class="clear" id="headernav" >
+                    <navigationMenu root="li" class="">
+                    <a href="{$menu.href|default=''}" class="">
+                            {$menu.name|default=''}
+                        </a>
+                    </navigationMenu>
+                    <navigationFolder root="li"
+                                      class=""
+                                      dropdown="ul"
+                                      dropdown-class="">
+                       <a href="{$menu.href|default=''}" target="{$menu.target|default=''}">{$menu.name|default=''}<span class="glyphicon glyphicon-chevron-down"></span></a>
+                    </navigationFolder>
+                </navigation>
+</div>
+

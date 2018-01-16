@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>首页 {$site_info.site_name|default=''}</title>
+<meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
+<meta name="description" content="{$site_info.site_seo_description|default=''}">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<link rel="stylesheet" href="__TMPL__/public/assets/css/bootstrap.css">
+<link rel="stylesheet" href="__TMPL__/public/assets/css/main.css">
+</head>
+<body>
+<div id="top"></div>
+<!-- 头部 -->
+<include file="public@head"/>
+<!-- 导航 -->
+<include file="public@nav"/>
+
+
+<!-- 轮播图 -->
+<div class="container-fluid inout" id="slide">
+	<img id="logo-bg" src="__TMPL__/public/assets/img/logo-bg.png"/>
+	<div class="row">
+            
+            	<!--左侧导航-->	
+
+		<ul>
+		    <php>
+                        $top_slide_id=empty($theme_vars['top_slide'])?1:$theme_vars['top_slide'];
+                        $num=1;
+                    </php>
+                    <slides id="$top_slide_id">
+                        <if condition="$num++==1">
+                            <li class="active">
+                            <img src="{:cmf_get_image_url($vo.image)}"/>
+                            <div id="title1">
+					<span>{$vo.title|default=''}</span><br/>
+					<span>{$vo.description|default=''}</span><br/><br/>
+					<div id="id1">
+						<div id="id2"><img src="__TMPL__/public/assets/img/btn.png"/></div>
+						<div id="id3"><img src="__TMPL__/public/assets/img/1234.png"/></div>
+						<a href="{$vo.url|default=''}"><p>更多</p></a>
+					</div>
+			    </div>		
+                        </li>
+                        <else />        
+                           <li>
+                            <img src="{:cmf_get_image_url($vo.image)}"/>
+                            <div id="title">
+					<span>{$vo.title|default=''}</span><br/>
+					<span>{$vo.description|default=''}</span><br/><br/>
+					<div id="id1">
+						<div id="id2"><img src="__TMPL__/public/assets/img/btn.png"/></div>
+						<div id="id3"><img src="__TMPL__/public/assets/img/1234.png"/></div>
+						<a href="{$vo.url|default=''}"><p>更多</p></a>
+					</div>
+			    </div>		
+                        </li>      
+                        </if>
+                       
+                    </slides>	
+		</ul>
+                <ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+	</div>
+</div>
+
+
+<!-- 关于百世慧通 -->
+<div class="container" id="about">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<div class="col-sm-6">
+				<img src="__TMPL__/public/assets/img/7.jpg"/>
+			</div>
+			<div class="col-sm-6">
+				<h2 style="">关于百世慧通</h2>
+				<p>百世慧通蓝宝石加工(安徽)有限公司，成立于2016年12月。百世慧通是全球尖端多晶蓝宝石玻璃薄板的研发、设计及制造公司。目前公司初期投入资本20,000万人民币，以中国大陆安徽作为百世慧通生产制造基地，并积极拓展国内、台湾、日本、韩国、美国及欧洲等全球各地蓝宝石玻璃基材市场。
+				</p>
+				<p>百世慧通拥有完整的蓝宝石玻璃屏生产线，提供18吋以内涵盖各类显示器应用之面板玻璃屏。以全方位玻璃保护屏技术与多元化产品组合，致力成为完整解决方案的提供者。我们提供客户技术和工程支持整合、少量多样客制化产品、稳定可靠的质量以及智能服务等，与客户共创更高附加价值。生产时程管理、产品良率与准时交货，均是百世慧通在制造生产方面的核。</p>
+<a href="#" class="btn btn-primary btn-md" style="line-height:1em;padding-left:3.3em;padding-right:4em;margin-bottom:20px;margin-top:20px">更多...</a>
+			</div>
+		</div>	
+	</div>
+</div>
+
+	
+<!-- 产品 -->
+<div class="container" id="product">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<div class="col-sm-6">
+				<h2>WE ARE CHAMPION</h2>
+				<p>百世慧通蓝宝石加工(安徽)有限公司(GFMT)产品应用在车载触控屏、工控与POS机触控屏、LED照明市场、手持数字行动显示屏及蓝宝石基材等产业，为全球市场提供低成本、高普及率的蓝宝石玻璃产品。
+				</p>
+				<p>蓝宝石因其出色的物理特性，广范应用于微电子、光电子、半导体、光通信、信息显示及国防军事等众多热点领域。与单晶工艺比较，多晶蓝宝石工艺程更为简化，烧结时间短于一天，且直接成形为薄板形状，无需经过开方、截断、晶棒整平、切片等耗损大且耗时的工艺流程，具有流程短、时间短、耗损少、耗能低、产量高、良率高、成本低，大尺寸生产加工容易等优势。
+				</p>
+				<a href="#" class="btn btn-primary btn-md" style="line-height:1em;padding-left:4em;padding-right:4em;margin-bottom:20px;margin-top:20px">更多...</a>
+			</div>
+			<div class="col-sm-6">
+				<img src="__TMPL__/public/assets/img/6.jpg"/>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<!-- 地址 -->
+<div class="container" id="contact">
+	<div class="row">
+			
+		<div class="col-sm-3 col-sm-offset-3 left clear">
+			<img src="__TMPL__/public/assets/img/8.jpg"/>
+			<p position:relative;>
+				<p><span id="area1">深圳<span></p>
+				地址：马鞍山郑蒲港新区中飞大道750号<br>
+				Add：Maanshan Zheng Pu port district in the 750 fly avenue<br>
+				E-mail：service @ gfmt-sapphire.com<br>
+				Web : www.gfmt-sapphire.com<br>
+				<div id="btm1">
+					<p>TEL：0555-XXX-666<br>
+					FAX：0555-538-6999
+					</p>
+				</div>
+			</p>
+		</div>
+		<div class="col-sm-3 col-sm-offset-1 right clear">
+			<p position:relative;>
+			<p><span id="area2">上海<span></p>
+				地址：马鞍山郑蒲港新区中飞大道750号<br>
+				Add：Maanshan Zheng Pu port district in the 750 fly avenue<br>
+				E-mail：service @ gfmt-sapphire.com<br>
+				Web : www.gfmt-sapphire.com<br>
+				<div id="btm2">
+					<p>TEL：0555-XXX-666<br>
+					FAX：0555-538-6999
+					</p>
+				</div>
+			</p>
+			<img src="__TMPL__/public/assets/img/9.jpg"/>	
+		</div>
+	</div>
+</div>
+
+<!-- 回到顶部 -->
+<div class="return-top" id="toTop"><img src="__TMPL__/public/assets/img/11.png"/></div>
+           
+
+<!-- 底部 -->
+<div class="container-fluid" id="footer">
+	<div class="container">
+		<div class="col-sm-8">
+			<ul class="clear">
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">我们的产品</a></li>
+				<li><a href="#">我们的伙伴</a></li>
+				<li><a href="#">法律声明</a></li>		
+			</ul>
+			<span>&copy2017 安徽百世慧通蓝宝石加工有限公司&nbsp&nbsp皖ICP备0000001号</span>
+		</div>
+		<div class="col-sm-4">
+			<span>+关注</span><br/><br/>
+			<ul id="follow" class="clear">
+				<li id="li1"></li>
+				<li id="li2"></li>
+				<li id="li3"></li>
+			</ul>	
+		</div>
+	</div>
+</div>
+</body>
+<script src="__TMPL__/public/assets/js/jquery-1.11.1.js"></script>
+<script src="__TMPL__/public/assets/js/bootstrap.js"></script>
+<script src="__TMPL__/public/assets/js/main.js"></script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<style type="css/text">
+#gotop{position:fixed;right:10px;bottom:10px;display:none}
+</style>
+<div id="gotop"></div>
+<script type="javascript/text">
+$(function(){
+        $(window).scroll(function(){
+                   if($(window).scrollTop > 100){
+                     $("#gotop").fadeIn(1000);//一秒渐入动画
+                     }else{
+                     $("#gotop").fadeOut(1000);//一秒渐隐动画
+                      }
+                      });
+                            $("#gotop").click(function(){
+            $('body,html').animate({scrollTop:0},1000);
+        });
+    });
+</script>
