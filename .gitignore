@@ -8,3 +8,5 @@ composer.lock
 /public/api
 /public/assets
 /node_modules
+/nbproject/private/
+/simplewind/vendor/
