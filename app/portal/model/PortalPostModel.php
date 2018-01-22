@@ -56,11 +56,89 @@ class PortalPostModel extends Model
      * @param $value
      * @return string
      */
+    public function setPostContent1Attr($value)
+    {
+        return htmlspecialchars(cmf_replace_content_file_url(htmlspecialchars_decode($value), true));
+    }
+    /**
+     * post_content 自动转化
+     * @param $value
+     * @return string
+     */
+    public function getPostContent1Attr($value)
+    {
+        return cmf_replace_content_file_url(htmlspecialchars_decode($value));
+    }
+
+    /**
+     * post_content 自动转化
+     * @param $value
+     * @return string
+     */
+    public function setPostContent2Attr($value)
+    {
+        return htmlspecialchars(cmf_replace_content_file_url(htmlspecialchars_decode($value), true));
+    }
+    
+        /**
+     * post_content 自动转化
+     * @param $value
+     * @return string
+     */
+    public function getPostContent2Attr($value)
+    {
+        return cmf_replace_content_file_url(htmlspecialchars_decode($value));
+    }
+
+    /**
+     * post_content 自动转化
+     * @param $value
+     * @return string
+     */
+    public function setPostContent3Attr($value)
+    {
+        return htmlspecialchars(cmf_replace_content_file_url(htmlspecialchars_decode($value), true));
+    }
+    
+        /**
+     * post_content 自动转化
+     * @param $value
+     * @return string
+     */
+    public function getPostContent3Attr($value)
+    {
+        return cmf_replace_content_file_url(htmlspecialchars_decode($value));
+    }
+
+    /**
+     * post_content 自动转化
+     * @param $value
+     * @return string
+     */
+    public function setPostContent4Attr($value)
+    {
+        return htmlspecialchars(cmf_replace_content_file_url(htmlspecialchars_decode($value), true));
+    }
+    
+        /**
+     * post_content 自动转化
+     * @param $value
+     * @return string
+     */
+    public function getPostContent4Attr($value)
+    {
+        return cmf_replace_content_file_url(htmlspecialchars_decode($value));
+    }
+
+    /**
+     * post_content 自动转化
+     * @param $value
+     * @return string
+     */
     public function setPostContentAttr($value)
     {
         return htmlspecialchars(cmf_replace_content_file_url(htmlspecialchars_decode($value), true));
     }
-
     /**
      * published_time 自动完成
      * @param $value
