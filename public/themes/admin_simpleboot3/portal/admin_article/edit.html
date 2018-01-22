@@ -81,12 +81,39 @@
                                       placeholder="请填写摘要">{$post.post_excerpt}</textarea>
                         </td>
                     </tr>
+
                     <tr>
                         <th>内容</th>
                         <td>
                             <script type="text/plain" id="content" name="post[post_content]">{$post.post_content}</script>
                         </td>
                     </tr>
+                     <tr>
+                        <th>内容1</th>
+                        <td>
+                            <script type="text/plain" id="content1" name="post[post_content1]">{$post.post_content1}</script>
+                        </td>
+                    </tr>
+                   <tr>
+                        <th>内容2</th>
+                        <td>
+                            <script type="text/plain" id="content2" name="post[post_content2]">{$post.post_content2}</script>
+                        </td>
+                    </tr>
+                                         <tr>
+                        <th>内容3</th>
+                        <td>
+                            <script type="text/plain" id="content3" name="post[post_content3]">{$post.post_content3}</script>
+                        </td>
+                    </tr>
+                                                             <tr>
+                        <th>内容4</th>
+                        <td>
+                            <script type="text/plain" id="content4" name="post[post_content4]">{$post.post_content4}</script>
+                        </td>
+                    </tr>
+                    
+                    
                     <tr>
                         <th>相册</th>
                         <td>
@@ -253,10 +280,34 @@
 <script type="text/javascript">
     $(function () {
 
-        editorcontent = new baidu.editor.ui.Editor();
+    editorcontent = new baidu.editor.ui.Editor();
         editorcontent.render('content');
         try {
             editorcontent.sync();
+        } catch (err) {
+        }
+        editorcontent1 = new baidu.editor.ui.Editor();
+        editorcontent1.render('content1');
+        try {
+            editorcontent1.sync();
+        } catch (err) {
+        }
+        editorcontent2 = new baidu.editor.ui.Editor();
+        editorcontent2.render('content2');
+        try {
+            editorcontent2.sync();
+        } catch (err) {
+        }
+        editorcontent3 = new baidu.editor.ui.Editor();
+        editorcontent3.render('content3');
+        try {
+            editorcontent3.sync();
+        } catch (err) {
+        }
+        editorcontent4 = new baidu.editor.ui.Editor();
+        editorcontent4.render('content4');
+        try {
+            editorcontent4.sync();
         } catch (err) {
         }
 
